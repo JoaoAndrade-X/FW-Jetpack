@@ -26,7 +26,7 @@ fun TaskItem(task: Task, taskViewModel: TaskViewModel) {
         verticalAlignment = Alignment.CenterVertically,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(8.dp)
+            .padding(16.dp)
     ) {
         Column {
             Text(
