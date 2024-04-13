@@ -4,9 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Column
+import androidx.compose.material3.Divider
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.livedata.observeAsState
+import androidx.compose.ui.graphics.Color
 import androidx.lifecycle.ViewModelProvider
 import com.joaoandrade.fwproject.data.database.TaskDatabase
 import com.joaoandrade.fwproject.data.repository.TaskRepository
@@ -36,6 +38,7 @@ class MainActivity : ComponentActivity() {
         val tasks by taskViewModel.allTasks.observeAsState(emptyList())
         Column {
             TaskInput(taskViewModel)
+            Divider(color = Color.Black)
             TaskList(tasks, taskViewModel)
         }
     }
